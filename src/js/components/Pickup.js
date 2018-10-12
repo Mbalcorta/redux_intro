@@ -1,31 +1,28 @@
     import React, { Component } from "react";
     
 
-      class Pickup extends Component {
-        constructor() {
-          super();
-          this.state = {
-            title: ""
-          };
-          this.handleChange = this.handleChange.bind(this);
-          this.handleSubmit = this.handleSubmit.bind(this);
-        }
-        handleChange(event) {
-          this.setState({ [event.target.id]: event.target.value });
-        }
-        handleSubmit(event) {
-          event.preventDefault();
-          const { title } = this.state;
-          const id = uuidv1();
-          this.props.addArticle({ title, id });
-          this.setState({ title: "" });
-        }
-        render() {
-          const { title } = this.state;
-          return (
-            <div className="subtotal"><span><a>Pickup savings</a></span><span>-3.85</span></div>
-          );
-        }
-      }
-      export default Pickup;
+    class Pickup extends Component {
+    constructor() {
+        super();
+        this.state = {
+        show: false
+        };
+        this.handleChange = this.handleChange.bind(this);
+    }
+    handleChange(event) {
+        this.setState({ show: !this.state.show });
+    }
+
+    render() {
+        const { show } = this.state;
+        return (
+            <div>
+                <div className="subtotal savings"><span><a onClick={this.handleChange}>Pickup savings</a></span><span>-3.85</span></div>
+                <div class="triangle-with-shadow"></div>
+                <div className="pickup_tooltip" style={{display: show ? 'block': 'none'}}><p>Pick up your order in the store helps cut cost, and we pass the savings on to you</p></div>
+            </div>
+        );
+    }
+    }
+    export default Pickup;
     

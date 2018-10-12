@@ -12,6 +12,7 @@ body {
     border: 1px solid #e6e7e8;
     border-radius: 5px;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+    margin-left: 500px;
 }
 
 .subtotal-container {
@@ -19,6 +20,61 @@ body {
 }
 
 .subtotal {
+    z-index: 3;
     display: flex;
     justify-content: space-between;
 }
+
+
+
+.savings span:nth-child(2){
+    color: red;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer; 
+}
+
+span:nth-child(2){
+    font-weight: bold;
+}
+
+.pickup_tooltip {
+    z-index: 1;
+    background-color: white;
+    width: 200px;
+    height: 100%;
+    border: 1px solid #e6e7e8;
+    margin-left: -50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+}
+
+p {
+    margin: 10px;
+}
+
+.triangle-with-shadow {
+    width: 100px;
+    height: 75px;
+    position: relative;
+    margin-top: -70px;
+    overflow: hidden;
+    box-shadow: 0 16px 0px -17px rgba(29, 27, 27, 0.5);
+  }
+  .triangle-with-shadow:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    transform: rotate(45deg);
+    top: 75px;
+    left: 25px;
+    box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+  }
+  /* .triangle-with-shadow:hover, .triangle-with-shadow:hover:after {
+    box-shadow: none;
+  } */
