@@ -1,12 +1,24 @@
 body {
+    font-size: 12px;
     line-height: 2;
+    font-family: myriad-pro,BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif
 }
 
-/* .container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -200px;
-    background-color: yellow;
-} */
+.container {
+    position: absolute;
+    display: block;
+    padding: 15px 16px;
+    width: 200px;
+    border: 1px solid #e6e7e8;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+}
+
+.subtotal-container {
+    position: relative;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+}
